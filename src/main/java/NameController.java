@@ -32,8 +32,8 @@ public class NameController {
             ArrayList<String> result = name.twoRandomNames();
 
             HashMap<String, Object> model = new HashMap<>();
-            model.put("name", result);
-            return new ModelAndView(model, "name.vtl");
+            model.put("names", result);
+            return new ModelAndView(model, "twonames.vtl");
         }, velocityTemplateEngine);
 
     }
