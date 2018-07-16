@@ -43,6 +43,18 @@ public class Name {
         return threeNames;
     }
 
+
+    public ArrayList<String> fourRandomNames(){
+        ArrayList<String> fourNames = new ArrayList<>();
+        shuffleNames();
+        fourNames.add(names.get(0));
+        fourNames.add(names.get(1));
+        fourNames.add(names.get(2));
+        fourNames.add(names.get(3));
+
+        return fourNames;
+    }
+
     public ArrayList<String> getNames(){
         return names;
     }

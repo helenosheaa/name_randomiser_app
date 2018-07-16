@@ -36,6 +36,26 @@ public class NameController {
             return new ModelAndView(model, "twonames.vtl");
         }, velocityTemplateEngine);
 
+        get("/three", (req, res) -> {
+
+            Name name = new Name();
+            ArrayList<String> result = name.threeRandomNames();
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", result);
+            return new ModelAndView(model, "threenames.vtl");
+        }, velocityTemplateEngine);
+
+        get("/four", (req, res) -> {
+
+            Name name = new Name();
+            ArrayList<String> result = name.fourRandomNames();
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", result);
+            return new ModelAndView(model, "fournames.vtl");
+        }, velocityTemplateEngine);
+
     }
 }
 
